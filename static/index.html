@@ -18,7 +18,7 @@
 
     <script>
         async function fetchServerData() {
-            const response = await fetch('http://34.176.138.198:5000/servers');
+            const response = await fetch('http://aqui pones la ip del host:5000/servers');
             const data = await response.json();
             const serversDiv = document.getElementById('servers');
             serversDiv.innerHTML = '';
@@ -26,7 +26,7 @@
             for (const [ip, info] of Object.entries(data)) {
                 const serverDiv = document.createElement('div');
                 serverDiv.className = 'server';
-                const iconUrl = info.icon_path ? `http://34.176.138.198:5000${info.icon_path}` : 'default_icon.png';
+                const iconUrl = info.icon_path ? `http://aqui pones la ip del host:5000${info.icon_path}` : 'default_icon.png';
 
                 serverDiv.innerHTML = `
                     <h2>${ip}</h2>
